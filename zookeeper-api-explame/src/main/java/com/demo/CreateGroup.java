@@ -1,41 +1,14 @@
+package com.demo;
+
 import org.apache.zookeeper.*;
 import org.apache.zookeeper.data.Stat;
 
-import java.io.IOException;
-import java.util.concurrent.CountDownLatch;
-
-public class CreateGroup implements Watcher {
-
-    private static final int SESSION_TTMEOUT = 5000;
-
-    private ZooKeeper zk;
-    private CountDownLatch connectedSignal = new CountDownLatch(1);
-
-    public void connect(String hosts) throws IOException, InterruptedException {
-        zk = new ZooKeeper(hosts, SESSION_TTMEOUT, this);
-        // 异步任务，当connectedSignal为0时运行
-        connectedSignal.await();
-    }
-
-    /**
-     * 获取事件之后的回调函数
-     *
-     * @param watchedEvent
-     */
-    public void process(WatchedEvent watchedEvent) {
-        if(watchedEvent.getState() == Event.KeeperState.SyncConnected) {
-            connectedSignal.countDown();
-        }
-    }
+public class CreateGroup extends ConnectWatcher {
 
     public String create(String groupName) throws KeeperException, InterruptedException {
         String path = "/" + groupName;
         // 权限为所有人共享，创建模式为持久节点
         return zk.create(path, null, ZooDefs.Ids.OPEN_ACL_UNSAFE, CreateMode.PERSISTENT);
-    }
-
-    public void close() throws InterruptedException {
-        zk.close();
     }
 
     public boolean exists(String groupName) throws KeeperException, InterruptedException {
