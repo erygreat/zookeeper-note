@@ -15,5 +15,4 @@
 - `zookeeper-api-explame` 对应 [4. Zookeeper的Java API](https://github.com/erygreat/zookeeper-note/blob/master/notebook/markdown/4.%20Zookeeper%E7%9A%84Java%20API.md)
 - `zookeeper-demo` 对应 [6. Zookeeper实践](https://github.com/erygreat/zookeeper-note/blob/master/notebook/markdown/6.%20Zookeeper%E5%AE%9E%E8%B7%B5.md)
 
-
-<div style="text-align: right">12</div>
+<p align="right">12 day</p>
