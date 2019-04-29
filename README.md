@@ -12,7 +12,7 @@
 
 项目目录对应关系：
 
-- `zookeeper-api-explame` 对应 [4. Zookeeper的Java API](https://github.com/erygreat/zookeeper-note/blob/master/notebook/markdown/4.%20Zookeeper%E7%9A%84Java%20API.md)
-- `zookeeper-demo` 对应 [6. Zookeeper实践](https://github.com/erygreat/zookeeper-note/blob/master/notebook/markdown/6.%20Zookeeper%E5%AE%9E%E8%B7%B5.md)
+- `zookeeper-api-explame` => [4. Zookeeper的Java API](https://github.com/erygreat/zookeeper-note/blob/master/notebook/markdown/4.%20Zookeeper%E7%9A%84Java%20API.md)
+- `zookeeper-demo` => [6. Zookeeper实践](https://github.com/erygreat/zookeeper-note/blob/master/notebook/markdown/6.%20Zookeeper%E5%AE%9E%E8%B7%B5.md)
 
 <p align="right">2019/03/12 ~ 2019/03/24, 12 day </p>
